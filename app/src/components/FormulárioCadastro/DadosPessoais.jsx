@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Switch, Button, TextField, FormControlLabel } from "@material-ui/core";
-import ValidacoesCadastro from './../../contexts/ValidacoesCadastro';
-import useErros from './../../hooks/useErros';
+import ValidacoesCadastro from "./../../contexts/ValidacoesCadastro";
+import useErros from "./../../hooks/useErros";
 
 function DadosPessoais({ aoEnviar }) {
   const [nome, setNome] = useState("");
@@ -16,7 +16,7 @@ function DadosPessoais({ aoEnviar }) {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        if(possoEnviar()) {
+        if (possoEnviar()) {
           aoEnviar({ nome, sobreNome, cpf, novidades, promocoes });
         }
       }}
@@ -93,10 +93,6 @@ function DadosPessoais({ aoEnviar }) {
 
       <Button type="submit" variant="contained" color="primary">
         Próximo
-      </Button>
-
-      <Button type="submit" variant="contained" color="primary">
-        Voltar
       </Button>
     </form>
   );

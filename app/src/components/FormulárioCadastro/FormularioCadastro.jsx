@@ -26,22 +26,9 @@ function FormularioCadastro({ aoEnviar }) {
     proximo();
   }
   
-  // function passaPagina(id) {
-  //   if (id === 0) {
-  //     proximo();
-  //   }
-  //   else {
-  //     volta();
-  //   }
-  // }
-
   function proximo() {
     setEtapaAtual(etapaAtual + 1);
   }
-
-  // function volta() {
-  //   setEtapaAtual(etapaAtual - 1);
-  // }
 
   return <>
   <Stepper activeStep={etapaAtual}>
