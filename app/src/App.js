@@ -2,7 +2,7 @@ import "./App.css";
 import FormularioCadastro from "./components/FormulárioCadastro/FormularioCadastro";
 import { Container, Typography } from "@material-ui/core";
 import "fontsource-roboto";
-import { validarCpf, validarSenha } from "./models/cadastro";
+import { validarCep, validarCpf, validarSenha } from "./models/cadastro";
 import ValidacoesCadastro from "./contexts/ValidacoesCadastro";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         Formulário de Cadastro
       </Typography>
       <ValidacoesCadastro.Provider
-        value={{ cpf: validarCpf, senha: validarSenha, nome: validarSenha }}
+        value={{ cpf: validarCpf, senha: validarSenha, nome: validarSenha, cep:validarCep}}
       >
         <FormularioCadastro aoEnviar={aoEnviarForm} />
       </ValidacoesCadastro.Provider>

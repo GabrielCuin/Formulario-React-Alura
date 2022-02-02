@@ -14,4 +14,16 @@ function validarCpf(cpf){
     }
   }
 
-  export { validarCpf, validarSenha}
+  function validarCep(cep) {
+    var pattern = new RegExp('^[0-9]{5}-?[0-9]{3}$');
+    if (!pattern.test(cep)) {
+      return ({valido: false, texto: "O valor digitado não é um CEP."});
+    }
+    else {
+      return ({valido: true, texto: ""});
+    }
+  }
+
+  export { validarCpf, validarSenha, validarCep}
+
+  //06631-030
